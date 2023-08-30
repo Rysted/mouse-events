@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.shell {
+  width: 500px;
+  position: absolute;
+}
+
+.design {
+  width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+/* img {
+  width: 500px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  left: 50%; 
+} 
+*/
+
+.mouse {
+  position: relative;
+}
+
+.buttonRight {
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 58px;
+}
+
+.middle {
+  position: absolute;
+  z-index: 1;
+  left: 104px;
+  bottom: 150px;
+}
+
+.buttonLeft {
+  position: absolute;
+  z-index: 1;
+  right: 128px;
+  bottom: 42px;
+}
+
+.pressed {
+  fill: #7cb2f9;
+}
+
+.released {
+  fill: #cae1ff;
+}
