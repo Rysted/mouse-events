@@ -11,6 +11,10 @@ main {
   height: 100vh;
 }
 
+.mouse {
+  position: relative;
+}
+
 .shell {
   width: 500px;
   position: absolute;
@@ -23,8 +27,21 @@ main {
   filter: hue-rotate(50deg);
 }
 
-.mouse {
-  position: relative;
+.razer {
+  width: 61.94px;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  animation: colorrun 5s linear infinite;
+}
+
+@keyframes colorrun {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .right {
@@ -58,7 +75,7 @@ main {
 
 @media (max-width: 768px) {
   .mouse {
-    transform: scale(0.6);
+    transform: scale(0.5);
   }
 }
 

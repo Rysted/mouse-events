@@ -1,6 +1,7 @@
 import "./App.css";
 import shell from "./assets/shell.png";
 import design from "./assets/design.png";
+import razer from "./assets/razer.png";
 import Button from "./components/Button";
 import { useState } from "react";
 
@@ -70,6 +71,7 @@ const App = () => {
         {/* Images */}
         <img className="shell" src={shell} alt="mouse shell" />
         <img className="design" src={design} alt="mouse design" />
+        <img className="razer" src={razer} alt="mouse razer" />
       </div>
     </main>
   );
