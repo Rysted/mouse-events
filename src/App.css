@@ -20,6 +20,7 @@ main {
   width: 500px;
   position: relative;
   z-index: 1;
+  filter: hue-rotate(50deg);
 }
 
 /* img {
@@ -35,7 +36,7 @@ main {
   position: relative;
 }
 
-.buttonRight {
+.right {
   position: absolute;
   z-index: 1;
   left: 0px;
@@ -49,7 +50,7 @@ main {
   bottom: 150px;
 }
 
-.buttonLeft {
+.left {
   position: absolute;
   z-index: 1;
   right: 128px;
