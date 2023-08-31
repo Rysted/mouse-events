@@ -1,11 +1,7 @@
 import { useState } from "react";
 import data from "./data";
 import Icon from "./components/Icon";
-
 import "./App.css";
-import shell from "./assets/shell.png";
-import design from "./assets/design.png";
-import razer from "./assets/razer.png";
 
 const App = () => {
   const handleContextMenu = (e) => {
@@ -73,10 +69,9 @@ const App = () => {
           );
         })}
 
-        {/* Images */}
-        <img className="shell" src={shell} alt="mouse shell" />
-        <img className="design" src={design} alt="mouse design" />
-        <img className="razer" src={razer} alt="mouse razer" />
+        <img className="design" src="/design.png" alt="mouse design" />
+        <img className="razer" src="/razer.png" alt="mouse razer" />
+        <img className="shell" src="/shell.png" alt="mouse shell" />
       </div>
     </main>
   );
