@@ -44,21 +44,34 @@ const App = () => {
       onContextMenu={handleContextMenu}
     >
       <div className="mouse">
-        {data.map((svg, index) => (
-          <Icon
-            key={index}
-            className={svg.name}
-            width={svg.width}
-            height={svg.height}
-            viewBox={svg.viewBox}
-            path={svg.path}
-            pressed={svg.name === pressed}
-            /* Únicamente para el evento de desplazamiento hacia arriba y hacia abajo */
-            stroke={svg.stroke}
-            strokeWidth={svg.strokeWidth}
-            strokeLinejoin={svg.strokeLinejoin}
-          />
-        ))}
+        {data.map((svg, index) => {
+          const {
+            name,
+            width,
+            height,
+            viewBox,
+            path,
+            stroke,
+            strokeWidth,
+            strokeLinejoin,
+          } = svg;
+
+          return (
+            <Icon
+              key={index}
+              className={name}
+              width={width}
+              height={height}
+              viewBox={viewBox}
+              path={path}
+              pressed={name === pressed}
+              /* Únicamente para el evento de desplazamiento hacia arriba y hacia abajo */
+              stroke={stroke}
+              strokeWidth={strokeWidth}
+              strokeLinejoin={strokeLinejoin}
+            />
+          );
+        })}
 
         {/* Images */}
         <img className="shell" src={shell} alt="mouse shell" />
