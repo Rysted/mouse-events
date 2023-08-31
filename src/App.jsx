@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "./data/data";
+import data from "./data";
 import Button from "./components/Button";
 
 import "./App.css";
