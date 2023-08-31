@@ -18,13 +18,16 @@ main {
 .shell {
   width: 500px;
   position: absolute;
+  top: 2.5px;
+  left: 0.5px;
 }
 
 .design {
   width: 500px;
   position: relative;
+  top: 0;
+  left: 0;
   z-index: 1;
-  filter: hue-rotate(50deg);
 }
 
 .razer {
@@ -47,14 +50,14 @@ main {
 .right {
   position: absolute;
   z-index: 1;
-  left: 0px;
+  left: 2px;
   top: 58px;
 }
 
 .middle {
   position: absolute;
   z-index: 1;
-  left: 104px;
+  left: 103px;
   bottom: 150px;
 }
 
@@ -65,8 +68,22 @@ main {
   bottom: 42px;
 }
 
+.up {
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  left: 28px;
+}
+
+.down {
+  position: absolute;
+  z-index: 2;
+  top: 72px;
+  left: 189px;
+}
+
 .pressed {
-  fill: #7cb2f9;
+  fill: #4b99ff;
 }
 
 .released {

@@ -30,27 +30,62 @@ const data = [
     viewBox: "0 0 245 274",
     path: "M35.5 273.5V269.5V266.5L36.4287 264.5L67 226.5L97.4287 188L137.5 141.5L158.5 118L179.5 95L221 54L238.5 40L241.5 25L244.5 10L238.5 8L223 7.5L202.262 4.70496L181.5 2L162 0.5L156.5 1L151.5 2.5L147 3.5L142.5 6L119.5 24.5L98 43.5L76 65L55 87.5L37 110L19.5 132.5L0 161L1 224L35.5 273.5Z",
   },
+  {
+    id: 3,
+    name: "down",
+    width: "93",
+    height: "105",
+    viewBox: "0 0 93 105",
+    path: "M2.82323 93.0905L42.5173 46.9737L27.1989 33.7888L88.7742 3.55973L68.0479 68.9487L52.7295 55.7636L13.0354 101.88L2.82323 93.0905Z",
+    stroke: "#416B92",
+    strokeWidth: "7",
+    strokeLinejoin: "bevel",
+  },
+  {
+    id: 4,
+    name: "up",
+    width: "87",
+    height: "110",
+    viewBox: "0 0 87 110",
+    path: "M83.6604 11.3125L46.9746 59.8568L63.0994 72.0426L3.56782 106.12L20.1003 39.5474L36.2249 51.7331L72.9107 3.18879L83.6604 11.3125Z",
+    stroke: "#416B92",
+    strokeWidth: "7",
+    strokeLinejoin: "bevel",
+  },
 ];
 
 const App = () => {
-  const handleContextMenu = (event) => {
-    event.preventDefault(); // Evita que aparezca el menú del clic derecho
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Evita que aparezca el menú del clic derecho
   };
 
-  const [pressed, setPressed] = useState(null);
+  const [pressed, setPressed] = useState(false);
+
+  const handleWheel = (event) => {
+    const scrollDirection = event.deltaY > 0 ? "down" : "up";
+
+    setPressed(scrollDirection);
+
+    setTimeout(() => {
+      setPressed(false);
+    }, 100);
+  };
 
   const handleMouseDown = (e) => {
     e.preventDefault();
-    setPressed(e.button);
+
+    const buttonClicked = data[e.button].name;
+
+    setPressed(buttonClicked);
   };
 
-  const handleMouseUp = (e) => {
-    e.preventDefault();
-    setPressed();
+  const handleMouseUp = () => {
+    setPressed(false);
   };
 
   return (
     <main
+      onWheel={handleWheel}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onContextMenu={handleContextMenu}
@@ -64,7 +99,11 @@ const App = () => {
             height={button.height}
             viewBox={button.viewBox}
             path={button.path}
-            pressed={button.id === pressed}
+            pressed={button.name === pressed}
+            /* Únicamente para el evento de desplazamiento hacia arriba y hacia abajo */
+            stroke={button.stroke}
+            strokeWidth={button.strokeWidth}
+            strokeLinejoin={button.strokeLinejoin}
           />
         ))}
 

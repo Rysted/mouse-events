@@ -1,4 +1,14 @@
-const Button = ({ className, width, height, viewBox, path, pressed }) => {
+const Button = ({
+  className,
+  width,
+  height,
+  viewBox,
+  path,
+  stroke,
+  strokeWidth,
+  strokeLinejoin,
+  pressed,
+}) => {
   return (
     <svg
       width={width}
@@ -8,7 +18,12 @@ const Button = ({ className, width, height, viewBox, path, pressed }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d={path} />
+      <path
+        d={path}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        strokeLinejoin={strokeLinejoin}
+      />
     </svg>
   );
 };
