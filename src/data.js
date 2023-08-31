@@ -1,4 +1,4 @@
-const data = [
+export default [
   {
     name: "left",
     width: "277",
@@ -27,7 +27,7 @@ const data = [
     viewBox: "0 0 93 105",
     path: "M2.82323 93.0905L42.5173 46.9737L27.1989 33.7888L88.7742 3.55973L68.0479 68.9487L52.7295 55.7636L13.0354 101.88L2.82323 93.0905Z",
     stroke: "#416B92",
-    strokeWidth: "7",
+    strokeWidth: "5",
     strokeLinejoin: "bevel",
   },
   {
@@ -37,9 +37,7 @@ const data = [
     viewBox: "0 0 87 110",
     path: "M83.6604 11.3125L46.9746 59.8568L63.0994 72.0426L3.56782 106.12L20.1003 39.5474L36.2249 51.7331L72.9107 3.18879L83.6604 11.3125Z",
     stroke: "#416B92",
-    strokeWidth: "7",
+    strokeWidth: "5",
     strokeLinejoin: "bevel",
   },
 ];
-
-export default data;
