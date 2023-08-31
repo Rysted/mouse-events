@@ -1,4 +1,13 @@
-# Eventos del Mouse en React + Vite
+# Controlador de Mouse React+Vite Interactivo
+Este proyecto de React+Vite presenta un controlador de mouse interactivo con animaciones y efectos visuales. Utilizando componentes personalizados y datos estructurados en el archivo **data.js**, el controlador de mouse responde a diferentes interacciones, como el desplazamiento, clics y pulsaciones de botones. La aplicación hace uso de SVG y CSS para renderizar los elementos gráficos y ofrece una experiencia de usuario atractiva y única.
+
+## Características Destacadas:
+
+- **Desplazamiento Personalizado:** Al desplazar la rueda del mouse, el controlador responde con animaciones sutiles y cambios visuales.
+- **Interacción de Botones:** Los botones del controlador cambian de apariencia al hacer clic y al mantener presionado el botón.
+- **Datos Estructurados:** El archivo **data.js** contiene información sobre los botones del controlador, como nombres, dimensiones y rutas SVG.
+- **Animaciones Dinámicas:** Los elementos gráficos del controlador, como el logo Razer, presentan animaciones de cambio de color en un ciclo infinito.
+- **Diseño Responsivo:** El diseño se adapta a diferentes tamaños de pantalla, utilizando transformaciones CSS según las dimensiones del dispositivo.
 
 ## Contenido
 
