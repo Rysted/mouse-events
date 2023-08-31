@@ -4,10 +4,10 @@ const Button = ({
   height,
   viewBox,
   path,
+  pressed,
   stroke,
   strokeWidth,
   strokeLinejoin,
-  pressed,
 }) => {
   return (
     <svg

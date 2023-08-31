@@ -71,15 +71,15 @@ main {
 .up {
   position: absolute;
   z-index: 2;
-  bottom: 50px;
-  left: 28px;
+  top: 72px;
+  left: 189px;
 }
 
 .down {
   position: absolute;
   z-index: 2;
-  top: 72px;
-  left: 189px;
+  bottom: 50px;
+  left: 28px;
 }
 
 .pressed {

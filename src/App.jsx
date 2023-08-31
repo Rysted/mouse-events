@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data";
-import Button from "./components/Button";
+import Icon from "./components/Icon";
 
 import "./App.css";
 import shell from "./assets/shell.png";
@@ -14,8 +14,8 @@ const App = () => {
 
   const [pressed, setPressed] = useState(false);
 
-  const handleWheel = (event) => {
-    const scrollDirection = event.deltaY > 0 ? "down" : "up";
+  const handleWheel = (e) => {
+    const scrollDirection = e.deltaY > 0 ? "up" : "down";
 
     setPressed(scrollDirection);
 
@@ -44,19 +44,19 @@ const App = () => {
       onContextMenu={handleContextMenu}
     >
       <div className="mouse">
-        {data.map((button, index) => (
-          <Button
+        {data.map((svg, index) => (
+          <Icon
             key={index}
-            className={button.name}
-            width={button.width}
-            height={button.height}
-            viewBox={button.viewBox}
-            path={button.path}
-            pressed={button.name === pressed}
+            className={svg.name}
+            width={svg.width}
+            height={svg.height}
+            viewBox={svg.viewBox}
+            path={svg.path}
+            pressed={svg.name === pressed}
             /* Únicamente para el evento de desplazamiento hacia arriba y hacia abajo */
-            stroke={button.stroke}
-            strokeWidth={button.strokeWidth}
-            strokeLinejoin={button.strokeLinejoin}
+            stroke={svg.stroke}
+            strokeWidth={svg.strokeWidth}
+            strokeLinejoin={svg.strokeLinejoin}
           />
         ))}
 
