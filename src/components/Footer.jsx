@@ -3,7 +3,7 @@ const Footer = () => {
     <footer>
       <a href="https://github.com/rysted">GitHub</a>
       <span className="eventsNone">|</span>
-      <a href="https://github.com/rysted/mouse-events-react">Project</a>
+      <a href="https://github.com/Rysted/mouse-events">Project</a>
       <p className="eventsNone">© 2023 Rysted</p>
     </footer>
   );
